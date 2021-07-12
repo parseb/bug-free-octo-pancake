@@ -1,0 +1,48 @@
+{
+  "environments": {
+    "review":{
+      "env": {
+        "HTTP_AUTH_PASSWORD": {
+          "required": true
+        },
+        "HTTP_AUTH_USERNAME": {
+          "required": true
+        }
+      },
+      "scripts": {
+        "postdeploy": "bundle exec rails db:seed"
+      }
+    }
+  },
+  "addons": [
+    "rollbar:free",
+    {
+      "plan": "heroku-postgresql",
+      "options": { "version": "12" }
+    },
+    "heroku-redis:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "MAIL_FROM": {
+      "required": true
+    },
+    "SEED_ADMIN_EMAIL": {
+      "required": true
+    },
+    "SEED_ADMIN_INITIAL_PASSWORD": {
+      "required": true
+    }
+  },
+  "formation": {},
+  "name": "project-name-param",
+  "scripts": {},
+  "stack": "heroku-18"
+}

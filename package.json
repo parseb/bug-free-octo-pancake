@@ -1,0 +1,38 @@
+{
+  "name": "project-name-param",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "lint": "prettier frontend --check && eslint frontend && stylelint 'frontend/**/*.scss'",
+    "lint-fix": "prettier frontend --write; eslint --fix frontend; stylelint --fix 'frontend/**/*.scss'"
+  },
+  "dependencies": {
+    "@rails/actioncable": "^6.1.4",
+    "@rails/activestorage": "^6.1.4",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^5.2.1",
+    "bootstrap": "4.6.0",
+    "dot-prop": "^6.0.1",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.15.0",
+    "webpack": "^4.0.0"
+  },
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.x"
+  },
+  "version": "0.1.1",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "babel-jest": "^27.0.5",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest-dom": "3.8.1",
+    "jest": "^26.4.2",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.12.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo "Running pre-commit hook"
+
+./bin/rspec-rubocop-staged-files
